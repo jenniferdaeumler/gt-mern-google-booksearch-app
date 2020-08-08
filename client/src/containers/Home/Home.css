@@ -1,0 +1,15 @@
+#homepageJumbotron{
+    background-color: #4285f4;
+    color: whitesmoke;
+    text-align: center;
+    /* height: 600px;
+    margin-left: 5%;
+    margin-right: 5%; */
+}
+#homeText{
+    font-size: 80px;
+}
+
+#homeTextSmall{
+    font-size: 30px;
+}
