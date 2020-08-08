@@ -5,6 +5,7 @@ import Home from "./containers/Home/Home";
 import NoMatch from "./containers/NoMatch/NoMatch";
 import Search from './containers/Search/Search';
 import Saved from './containers/Saved/Saved';
+import Nav from './containers/Nav/Nav';
 
 function App() {
   useEffect(()=>{
@@ -20,6 +21,7 @@ function App() {
   return (
 <Router>
   <Switch>
+    <Nav/>
     <Route exact path="/" component={Home}/>
     <Route exact path="/search" component={Search}/>
     <Route exact path="/saved" component={Saved}/> 
