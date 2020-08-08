@@ -2,8 +2,8 @@ const router = require("express").Router();
 const db = require("../models/index")
 
 router.get("/api/books", function(req, res) {
-    db.Books.find({}).then(foundBook =>{
-        res.json(foundBook)
+    db.Books.find({}).then(searchedBook =>{
+        res.json(searchedBook)
     })
 })
 
