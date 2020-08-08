@@ -1,0 +1,9 @@
+#searchButton{
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#searchText{
+    text-align: center;
+    padding-top: 10px;
+}
