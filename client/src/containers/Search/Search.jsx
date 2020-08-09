@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./Search.css";
 import API from "../../Utils/API";
+import SearchResults from "../../containers/SearchResults/SearchResults";
 
 class Search extends Component {
   state = {
     search: "",
+    results: [],
     image: [],
     author: [],
     title: [],
@@ -68,14 +70,7 @@ class Search extends Component {
                   </button>
                 </div>
               </form>
-
-              <div className="card">
-                <div className="card-body">
-                  <p>
-                    {this.state.NOTSURE}
-                  </p>
-                </div>
-              </div>
+              <SearchResults results= {this.state.search}/>
             </div>
           </div>
         </div>
