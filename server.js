@@ -19,7 +19,7 @@ app.get("/api/config", (req, res) => {
 mongoose
   .connect(
     process.env.MONGODB_URI ||
-      "mongodb://localhost/gt-mern-google-booksearch-app",
+      "mongodb://localhost/googlebooks",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {

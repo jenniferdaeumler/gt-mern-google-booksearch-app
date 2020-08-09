@@ -12,7 +12,7 @@ function App() {
     axios
       .get("/api/config")
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
