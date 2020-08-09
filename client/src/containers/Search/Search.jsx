@@ -16,7 +16,7 @@ class Search extends Component {
 
   componentDidMount() {
     API.searchedBook()
-      .then((res) => this.setState({ image: res.data.author }))
+      .then((res) => this.setState({ results: res.data }))
       .catch((err) => console.log(err));
   }
 
