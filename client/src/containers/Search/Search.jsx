@@ -72,7 +72,7 @@ class Search extends Component {
               <div className="card">
                 <div className="card-body">
                   <p>
-                    Picture: {this.author} Title: Author(s): Description: Link:
+                    {this.state.NOTSURE}
                   </p>
                 </div>
               </div>
