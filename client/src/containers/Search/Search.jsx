@@ -7,18 +7,13 @@ class Search extends Component {
   state = {
     search: "",
     results: [],
-    image: [],
-    author: [],
-    title: [],
-    description: [],
-    link: [],
   };
 
-//   componentDidMount() {
-//     API.searchedBook()
-//       .then((res) => this.setState({ results: res.data.items }))
-//       .catch((err) => console.log(err));
-//   }
+  //   componentDidMount() {
+  //     API.searchedBook()
+  //       .then((res) => this.setState({ results: res.data.items }))
+  //       .catch((err) => console.log(err));
+  //   }
 
   handleInputChange = (event) => {
     this.setState({ search: event.target.value });
@@ -28,18 +23,33 @@ class Search extends Component {
     event.preventDefault();
     console.log("clicked submit");
 
-    if(this.state.search){
-    API.searchedBook(this.state.search)
-      .then((res) => {
-        console.log(res.data);
-        if (res.data.status === "error") {
-          throw new Error(res.data.items);
-        }
-        this.setState({ results: res.data.items, error: "" });
-      })
-      .catch((err) => this.setState({ error: err.message }));
+    if (this.state.search) {
+      API.searchedBook(this.state.search)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data.status === "error") {
+            throw new Error(res.data.items);
+          }
+          this.setState({ results: res.data.items, error: "" });
+        })
+        .catch((err) => this.setState({ error: err.message }));
     }
+  };
 
+  handleSavedBook = (id) => {
+    // search results for the book with the same id as the id paramater;
+    // constru
+//loop through array, look for book with matching id...
+
+//add stuff to this object --> 
+    const bookInfo = {};
+
+     API.saveBook(bookInfo)
+       .then((res) => {
+         console.log(res);
+       })
+       .catch((err) => console.log(err));
+    // console.log(id);
   };
 
   render() {
@@ -50,7 +60,7 @@ class Search extends Component {
             <div className="col-12">
               <form className="search">
                 <div className="form-group">
-                  <label for="exampleInputEmail1" id="searchText">
+                  <label htmlFor="exampleInputEmail1" id="searchText">
                     Search for a book...
                   </label>
                   <input
@@ -59,7 +69,6 @@ class Search extends Component {
                     name="search"
                     type="search"
                     className="form-control"
-                    id="searchForm"
                     aria-describedby="searchForBook"
                     placeholder="Search by title or author."
                     id="searchedBook"
@@ -74,7 +83,10 @@ class Search extends Component {
                   </button>
                 </div>
               </form>
-              <SearchResults results= {this.state.results}/>
+              <SearchResults
+                results={this.state.results}
+                saveBook={this.handleSavedBook}
+              />
             </div>
           </div>
         </div>
