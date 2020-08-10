@@ -16,7 +16,7 @@ class Search extends Component {
 
   componentDidMount() {
     API.searchedBook()
-      .then((res) => this.setState({ results: res.data }))
+      .then((res) => this.setState({ results: res.data.items }))
       .catch((err) => console.log(err));
   }
 

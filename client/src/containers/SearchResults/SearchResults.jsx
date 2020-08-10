@@ -21,17 +21,17 @@ function searchResults(props) {
 }
 
 const renderBookData = (book) => {
-//   return (
-// //     <tr key={book.volumeInfo.title}>
-// //       <td>
-// //         <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Book Pic" />
-// //       </td>
-// //       <td>
-// //         {book.volumeInfo.authors} 
-// //       </td>
-// //       <td>{book.volumeInfo.description}</td>
-//       <td>{book.volumeInfo.infoLink}</td>
-// //     </tr>
-//   );
+  return (
+    <tr key={book.volumeInfo.title}>
+      <td>
+        <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="Book Pic" />
+      </td>
+      <td>
+        {book.volumeInfo.authors} 
+      </td>
+      <td>{book.volumeInfo.searchInfo}</td>
+      <td>{book.volumeInfo.infoLink}</td>
+    </tr>
+  );
 };
 export default searchResults;
