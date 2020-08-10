@@ -31,9 +31,9 @@ class Search extends Component {
       .then((res) => {
         console.log(res.data);
         if (res.data.status === "error") {
-          throw new Error(res.data.message);
+          throw new Error(res.data.items);
         }
-        this.setState({ results: res.data.message, error: "" });
+        this.setState({ results: res.data.items, error: "" });
       })
       .catch((err) => this.setState({ error: err.message }));
   };
@@ -70,7 +70,7 @@ class Search extends Component {
                   </button>
                 </div>
               </form>
-              <SearchResults results= {this.state.search}/>
+              <SearchResults results= {this.state.results}/>
             </div>
           </div>
         </div>
