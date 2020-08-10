@@ -11,6 +11,7 @@ class Saved extends Component {
               <h1 id="savedBooksText">Saved Books</h1>
               <div className="card">
                 <div className="card-body">
+            {/* I would dynamically render the saved books here by using the get route for the savedBooks in the DB */}
                   <p>
                     Picture: 
                     Title:

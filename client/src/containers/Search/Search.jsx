@@ -44,7 +44,7 @@ class Search extends Component {
     for (i = 0; i < id.length; i++) {
       console.log(id);
     }
-    //add stuff to this object -->
+    //add keys into to this object and construct it-->
     const bookInfo = {};
 
     API.saveBook(bookInfo)
