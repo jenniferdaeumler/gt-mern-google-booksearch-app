@@ -14,11 +14,11 @@ class Search extends Component {
     link: [],
   };
 
-  componentDidMount() {
-    API.searchedBook()
-      .then((res) => this.setState({ results: res.data.items }))
-      .catch((err) => console.log(err));
-  }
+//   componentDidMount() {
+//     API.searchedBook()
+//       .then((res) => this.setState({ results: res.data.items }))
+//       .catch((err) => console.log(err));
+//   }
 
   handleInputChange = (event) => {
     this.setState({ search: event.target.value });
@@ -27,6 +27,8 @@ class Search extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     console.log("clicked submit");
+
+    if(this.state.search){
     API.searchedBook(this.state.search)
       .then((res) => {
         console.log(res.data);
@@ -36,6 +38,8 @@ class Search extends Component {
         this.setState({ results: res.data.items, error: "" });
       })
       .catch((err) => this.setState({ error: err.message }));
+    }
+
   };
 
   render() {
