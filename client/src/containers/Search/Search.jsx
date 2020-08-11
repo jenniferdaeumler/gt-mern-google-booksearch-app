@@ -37,17 +37,20 @@ class Search extends Component {
   };
 
   handleSavedBook = (id) => {
+
+    const savedBook = this.state.results.filter(book=>book.id===id)[0]
+    console.log(savedBook);
     // search results for the book with the same id as the id paramater;
     // constru
     //loop through array, look for book with matching id...
-    var i;
-    for (i = 0; i < id.length; i++) {
-      console.log(id);
-    }
-    //add keys into to this object and construct it-->
-    const bookInfo = {};
+    // var i;
+    // for (i = 0; i < id.length; i++) {
+    //   console.log(id);
+    // }
+    // //add keys into to this object and construct it-->
+    // const bookInfo = {};
 
-    API.saveBook(bookInfo)
+    API.saveBook(savedBook)
       .then((res) => {
         console.log(res);
       })

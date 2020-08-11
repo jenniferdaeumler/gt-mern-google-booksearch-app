@@ -8,8 +8,8 @@ router.get("/api/books", function(req, res) {
 })
 
 router.post("/api/books", function(req,res){
-    db.Books.create(req.body).then(savedBook => {
-        res.json(savedBook)
+    db.Books.create(req.body).then(saveBook => {
+        res.json(saveBook)
     })
 })
 

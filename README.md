@@ -34,7 +34,7 @@ Click on search and type the name of a book or author you want to learn more abo
 
 *feature in progress
 
-![App in Use](https://media3.giphy.com/media/Ici0j1pb3UJJ7jVbQ8/200w.webp)
+![App in Use](https://media3.giphy.com/media/Ici0j1pb3UJJ7jVbQ8/200w.webp) 
 
 
 ## Credits
