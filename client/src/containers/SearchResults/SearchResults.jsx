@@ -4,7 +4,7 @@ function searchResults(props) {
   console.log(props.results);
 
   const books = props.results.map((book) => {
-    const description = book.searchInfo.textSnippet
+    const description = book.searchInfo
       ? book.searchInfo.textSnippet
       : "";
     return (

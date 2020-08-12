@@ -8,14 +8,14 @@ export default {
   },
   //api/books is the saved book route...
   savedBooks: function () {
-    return axios.get("/api/books").then((result) => result.data);
+    return axios.get("/api/books")
   },
   //this saves a book to the database
   saveBook: function (bookInfo) {
-    return axios.post("/api/books", bookInfo).then((result) => result.data);
+    return axios.post("/api/books", bookInfo)
   },
   //deletes a book given a specific id
   deletedBook: function (id) {
-    return axios.delete("/api/books/" + id).then((result) => result.data);
+    return axios.delete("/api/books/" + id)
   },
 };

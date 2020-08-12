@@ -8,6 +8,7 @@ router.get("/api/books", function(req, res) {
 })
 
 router.post("/api/books", function(req,res){
+    console.log(req.body);
     db.Books.create(req.body).then(saveBook => {
         res.json(saveBook)
     })
