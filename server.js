@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const path = require ("path"); 
+const controller = require("./controllers/API")
 
 const PORT = process.env.PORT || 3001;
 
@@ -9,6 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("client/build"));
+app.use(controller);
+
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

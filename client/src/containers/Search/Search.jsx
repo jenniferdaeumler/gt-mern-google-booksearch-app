@@ -50,7 +50,14 @@ class Search extends Component {
     // //add keys into to this object and construct it-->
     // const bookInfo = {};
 
-    API.saveBook(bookInfo)
+    const postBook = {
+     title: bookInfo.volumeInfo.title,
+     authors: bookInfo.volumeInfo.authors,
+     description: bookInfo.volumeInfo.description,
+     image: bookInfo.volumeInfo.imageLinks.thumbnail,
+     link: bookInfo.volumeInfo.infoLink
+    }
+    API.saveBook(postBook)
       .then((res) => {
         console.log(res);
       })
