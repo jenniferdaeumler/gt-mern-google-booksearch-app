@@ -1,22 +1,13 @@
-import React from "react";
+import React from 'react';
+import Saved from "./Saved/Saved";
 
-function searchResults(props) {
-  console.log(props.results);
-
-  const books = props.results.map((book) => {
-    const description = book.searchInfo
-      ? book.searchInfo.textSnippet
-      : "";
-      const pic = book.volumeInfo.imageLinks
-      ? book.volumeInfo.imageLinks.smallThumbnail
-      : "";
-
+const SavedResults = () => {
     return (
-      <div className="container" key={book.id}>
+        <div className="container" key={book.id}>
         <div className="card">
           <div className="card-body">
             <img
-              src={pic}
+              src={book.volumeInfo.imageLinks.smallThumbnail}
               alt="Book Pic"
             />
 
@@ -41,9 +32,6 @@ function searchResults(props) {
         </div>
       </div>
     );
-  });
+};
 
-  return <div>{books}</div>;
-}
-
-export default searchResults;
+export default SavedResults;

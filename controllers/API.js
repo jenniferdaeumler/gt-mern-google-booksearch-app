@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const db = require("../models/index");
 
+//server responding to get request sent to the address /api/books by finding all Books from the DB then res.json --> responding with json and sending 
+//the searched book data back
 router.get("/api/books", function (req, res) {
   db.Book.find({}).then((searchedBook) => {
     res.json(searchedBook);

@@ -7,6 +7,7 @@ export default {
     return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
   },
   //api/books is the saved book route...
+  //sending a get request to the server at the address /api/books
   savedBooks: function () {
     return axios.get("/api/books")
   },
