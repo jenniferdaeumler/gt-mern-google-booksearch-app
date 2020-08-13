@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const db = require("../models/index");
+const db = require("../models/Index");
 
 //server responding to get request sent to the address /api/books by finding all Books from the DB then res.json --> responding with json and sending 
 //the searched book data back
