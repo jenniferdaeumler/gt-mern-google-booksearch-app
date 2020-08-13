@@ -15,8 +15,6 @@ As a user, I want to be able to search for books I am interested in so that I ca
 ## Description
 This is a React-based Google Books Search app. I created React components, worked with helper/util functions, and utilized React lifecycle methods to query and display books based on user searches. I used Node, Express and MongoDB so that users can save books to review or purchase later.*
 
-*feature in progress
-
 
 ## Table of Contents
 
@@ -32,7 +30,6 @@ Clone the repo, run in the browser for local hosting, click on the Heroku linked
 ## Usage
 Click on search and type the name of a book or author you want to learn more about.  View the list of books that generate from the Google Books' API.  Click `view` to view the book on Google Books' website.  Click `save` to save the book to your personal database for future reference.*
 
-*feature in progress
 
 ![App in Use](https://media3.giphy.com/media/Ici0j1pb3UJJ7jVbQ8/200w.webp) 
 
