@@ -6,7 +6,7 @@ Search, view, and save books you like or are interested in for the future using 
 # Project Links
 [Link to GitHub Repo](https://github.com/jenniferdaeumler/gt-mern-google-booksearch-app)
 
-[Link to GitHub Pages Deployed Site](https://gt-mern-google-booksearch.herokuapp.com/)
+[Link to Deployed Site](https://gt-mern-google-booksearch.herokuapp.com/)
 
 ## User Story
 As a user, I want to be able to search for books I am interested in so that I can access their information, purchase on Google Books, or save for future reference.
